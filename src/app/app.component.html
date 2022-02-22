@@ -1,12 +1,19 @@
 <div class="container">
-  <div class="row">
+  <h3>I'm in the AppComponent!</h3>
+  <hr />
+  <button
+    type="button"
+    class="btn btn-primary showMessages"
+    (click)="showMessages = !showMessages"
+  >
+    {{ showMessages ? "Hide messages" : "Show messages" }}
+  </button>
+  <div class="row" *ngIf="showMessages">
     <div class="col-xs-12"></div>
-    <h3>I'm in the AppComponent!</h3>
-    <hr />
+
     <app-warning-alert></app-warning-alert>
     <app-success-alert></app-success-alert>
     <app-info-alert></app-info-alert>
-
-    <app-servers></app-servers>
   </div>
+  <app-servers></app-servers>
 </div>

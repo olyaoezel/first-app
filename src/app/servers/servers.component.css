@@ -1,0 +1,22 @@
+.showDetails {
+  display: block;
+  margin-top: 20px;
+}
+
+.showDetailsButton {
+  width: 128px;
+}
+
+.detailsSmiley::after {
+  content: "\1F603";
+  margin-left: 10px;
+}
+
+.fromFifth {
+  background-color: blueviolet;
+  color: white;
+}
+
+.withoutDots {
+  list-style-type: none;
+}
