@@ -1,0 +1,10 @@
+<hr>
+<button class="btn btn-secondary" (click)="startGame()">Start Game</button>
+<!-- <p class="gameOutput">{{increment}}</p> -->
+<button type="button" class="btn btn-warning" (click)="pauseGame()">Pause Game</button>
+<ul *ngFor="let number of allNumbers">
+   
+        <app-even [gameNumber]="number"></app-even>
+        <app-odd [gameNumber]="number"></app-odd>
+   
+</ul>

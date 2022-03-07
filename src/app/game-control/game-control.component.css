@@ -1,0 +1,10 @@
+.btn-success,
+.btn-warning {
+  margin: 10px;
+}
+
+.gameOutput {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+}

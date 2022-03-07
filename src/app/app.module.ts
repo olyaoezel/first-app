@@ -9,6 +9,9 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { SecondaryAlertComponent } from './secondary-alert/secondary-alert.component';
 import { InfoAlertComponent } from './info-alert/info-alert.component';
 import { FormsModule } from '@angular/forms';
+import { GameControlComponent } from './game-control/game-control.component';
+import { OddComponent } from './game-control/odd/odd.component';
+import { EvenComponent } from './game-control/even/even.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { FormsModule } from '@angular/forms';
     WarningAlertComponent,
     SuccessAlertComponent,
     SecondaryAlertComponent,
-    InfoAlertComponent
+    InfoAlertComponent,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent
   ],
   imports: [
     BrowserModule,
