@@ -1,6 +1,7 @@
 <div class="container">
   <h3>I'm in the AppComponent!</h3>
   <hr />
+  <p *appUnless="showMessages">Click this button &darr; to see more </p>
   <button
     type="button"
     class="btn btn-primary showMessages"
@@ -8,6 +9,7 @@
   >
     {{ showMessages ? "Hide messages" : "Show messages" }}
   </button>
+  
   <div class="row" *ngIf="showMessages">
     <div class="col-xs-12"></div>
 
@@ -17,4 +19,13 @@
   </div>
   <app-servers></app-servers>
   <app-game-control></app-game-control>
+  <h3 appBasicHightlight [defaultColor]="'rgb(218, 247, 166)'" [highlightColor]="'rgb(250, 250, 51)'">Changes background on hover: styled with a directive</h3>
+  <!-- <h3 appBasicHightlight defaultColor="rgb(218, 247, 166)" highlightColor="rgb(250, 250, 51)">Changes backgroundon hover: styled with a directive</h3> -->
+  <ul [ngSwitch]="value">
+    <li *ngSwitchCase="5">Value is {{value}} apples (ngSwitchCase)</li>
+    <li *ngSwitchCase="10">Value is {{value}} bananas (ngSwitchCase)</li>
+    <li *ngSwitchCase="15">Value is {{value}} pears (ngSwitchCase)</li>
+    <li *ngSwitchCase="20">Value is {{value}} plumps (ngSwitchCase)</li>
+  </ul>
+
 </div>

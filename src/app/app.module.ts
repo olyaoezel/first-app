@@ -12,6 +12,9 @@ import { FormsModule } from '@angular/forms';
 import { GameControlComponent } from './game-control/game-control.component';
 import { OddComponent } from './game-control/odd/odd.component';
 import { EvenComponent } from './game-control/even/even.component';
+import { BasicHightlightDirective } from './directives/basic-hightlight.directive';
+import { UnlessDirective } from './directives/unless.directive';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,7 @@ import { EvenComponent } from './game-control/even/even.component';
     InfoAlertComponent,
     GameControlComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent, BasicHightlightDirective, UnlessDirective
   ],
   imports: [
     BrowserModule,
