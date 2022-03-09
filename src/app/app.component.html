@@ -1,6 +1,6 @@
 <div class="container">
-  <h3>I'm in the AppComponent!</h3>
-  <hr />
+  <!-- <h3>I'm in the AppComponent!</h3> -->
+  <!-- <hr /> -->
   <p *appUnless="showMessages">Click this button &darr; to see more </p>
   <button
     type="button"
@@ -27,5 +27,16 @@
     <li *ngSwitchCase="15">Value is {{value}} pears (ngSwitchCase)</li>
     <li *ngSwitchCase="20">Value is {{value}} plumps (ngSwitchCase)</li>
   </ul>
+
+  <div class="container">
+    <hr>
+    <div class="row">
+      <div class="col-xs-12 col-md-8 col-md-offset-2">
+        <p>Via service.ts</p>
+        <app-active-users></app-active-users>
+        <app-inactive-users ></app-inactive-users>
+      </div>
+    </div>
+  </div>
 
 </div>
