@@ -1,0 +1,22 @@
+<div class="floatingLabelGroup">
+    <input type="text" class="inputText"
+    (keydown.enter)="greetGuest($event)"
+     />
+
+    <label class="floatingLabel">Type your name and press Enter</label>
+</div>
+
+
+<h3 *ngIf="guestName">Hello, <span [ngStyle]="{ color: 'orange' }">{{ guestName }}</span>. Welcome to the Angular App</h3>
+
+<app-game-control></app-game-control>
+<h3 appBasicHightlight [defaultColor]="'rgb(218, 247, 166)'" [highlightColor]="'rgb(250, 250, 51)'">Changes background
+    on hover: styled with a directive</h3>
+<!-- <h3 appBasicHightlight defaultColor="rgb(218, 247, 166)" highlightColor="rgb(250, 250, 51)">Changes backgroundon hover:
+    styled with a directive</h3> -->
+<ul [ngSwitch]="value">
+    <li *ngSwitchCase="5">Value is {{value}} apples (ngSwitchCase)</li>
+    <li *ngSwitchCase="10">Value is {{value}} bananas (ngSwitchCase)</li>
+    <li *ngSwitchCase="15">Value is {{value}} pears (ngSwitchCase)</li>
+    <li *ngSwitchCase="20">Value is {{value}} plumps (ngSwitchCase)</li>
+</ul>

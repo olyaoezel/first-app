@@ -1,42 +1,33 @@
 <div class="container">
-  <!-- <h3>I'm in the AppComponent!</h3> -->
-  <!-- <hr /> -->
-  <p *appUnless="showMessages">Click this button &darr; to see more </p>
-  <button
-    type="button"
-    class="btn btn-primary showMessages"
-    (click)="showMessages = !showMessages"
-  >
-    {{ showMessages ? "Hide messages" : "Show messages" }}
-  </button>
-  
-  <div class="row" *ngIf="showMessages">
-    <div class="col-xs-12"></div>
+ 
+    
+     
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/messages">Messages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/servers">Servers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/users">Users</a>
+              </li>
+            </ul>
+         
+      </nav>
 
-    <app-warning-alert></app-warning-alert>
-    <app-success-alert></app-success-alert>
-    <app-info-alert></app-info-alert>
-  </div>
-  <app-servers></app-servers>
-  <app-game-control></app-game-control>
-  <h3 appBasicHightlight [defaultColor]="'rgb(218, 247, 166)'" [highlightColor]="'rgb(250, 250, 51)'">Changes background on hover: styled with a directive</h3>
-  <!-- <h3 appBasicHightlight defaultColor="rgb(218, 247, 166)" highlightColor="rgb(250, 250, 51)">Changes backgroundon hover: styled with a directive</h3> -->
-  <ul [ngSwitch]="value">
-    <li *ngSwitchCase="5">Value is {{value}} apples (ngSwitchCase)</li>
-    <li *ngSwitchCase="10">Value is {{value}} bananas (ngSwitchCase)</li>
-    <li *ngSwitchCase="15">Value is {{value}} pears (ngSwitchCase)</li>
-    <li *ngSwitchCase="20">Value is {{value}} plumps (ngSwitchCase)</li>
-  </ul>
-
-  <div class="container">
-    <hr>
-    <div class="row">
-      <div class="col-xs-12 col-md-8 col-md-offset-2">
-        <p>Via service.ts</p>
-        <app-active-users></app-active-users>
-        <app-inactive-users ></app-inactive-users>
-      </div>
-    </div>
-  </div>
-
+          <router-outlet></router-outlet>
+    
 </div>
+
+
+
+
+
+
+
+  

@@ -1,6 +1,6 @@
 import { Component,  Input, OnInit} from '@angular/core';
-import { UserActionsCounter } from '../services/user-actions-counter.service';
-import { UserService } from '../services/user.service';
+import { UserActionsCounter } from '../../services/user-actions-counter.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-active-users',
