@@ -22,8 +22,12 @@
                 <a class="nav-link dropdown-toggle" role="button" (click)="openDropdown = !openDropdown">Users</a>
 
                   <ul class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf="openDropdown" >
-                    <li><a class="dropdown-item" routerLink="/users" (click)="openDropdown = false">Status</a></li>
-                    <li><a class="dropdown-item" routerLink="/users/new-subscriptions" (click)="openDropdown = false">New Subscriptions</a></li>
+                    <li><a class="dropdown-item" [routerLink]="['/users', 1, 'Anna']" (click)="openDropdown = false">User 1</a></li>
+                    <li><a class="dropdown-item" [routerLink]="['/users', 2, 'Max']" (click)="openDropdown = false">User 2</a></li>
+                    <li><a class="dropdown-item" [routerLink]="['/users', 3, 'Chris']" (click)="openDropdown = false">User 3</a></li>
+                    <li><a class="dropdown-item" [routerLink]="['/users', 4, 'Manu']" (click)="openDropdown = false">User 4</a></li>
+                    <li><a class="dropdown-item" routerLink="/users" (click)="openDropdown = false">All users</a></li>
+                   <li><a class="dropdown-item" routerLink="/users/new-subscriptions" (click)="openDropdown = false">New Subscriptions</a></li>
                   </ul>
                
                
