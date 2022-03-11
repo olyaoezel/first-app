@@ -3,6 +3,6 @@
   <li
     class="list-group-item"
     *ngFor="let user of inactiveUsers; index as i">
-    {{ user }} | <a href="#" (click)="onSetToActive(i)">Set to Active</a>
+    {{ user }} | <a class="userAction" (click)="onSetToActive(i)">Set to Active</a>
   </li>
 </ul>
