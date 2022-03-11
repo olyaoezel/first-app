@@ -1,3 +1,13 @@
 h3 {
   color: blue;
 }
+
+.active {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.navbar {
+  padding: 0;
+  margin-top: 10px;
+}

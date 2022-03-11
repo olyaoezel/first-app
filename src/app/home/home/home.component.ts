@@ -16,6 +16,6 @@ export class HomeComponent implements OnInit {
 
   greetGuest(event) {
     this.guestName = event.target.value;
-}
+  }
 
 }
