@@ -17,7 +17,7 @@ import { UnlessDirective } from './directives/unless.directive';
 import { ActiveUsersComponent } from './users/active-users/active-users.component';
 import { InactiveUsersComponent } from './users/inactive-users/inactive-users.component';
 import { UsersComponent } from './users/users.component';
-import { HomeComponent } from './home/home/home.component';
+import { HomeComponent } from './home/home.component';
 import { NewSubscriptionsComponent } from './users/new-subscriptions/new-subscriptions/new-subscriptions.component';
 import { ClickOutsideDirective } from './directives/click-outside.directive';
 import { UserComponent } from './users/user/user.component';

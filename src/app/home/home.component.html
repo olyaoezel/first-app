@@ -20,3 +20,9 @@
     <li *ngSwitchCase="15">Value is {{value}} pears (ngSwitchCase)</li>
     <li *ngSwitchCase="20">Value is {{value}} plumps (ngSwitchCase)</li>
 </ul>
+
+<p>User with <strong>ID 1</strong> was loaded</p>
+<button type="button" class="btn btn-primary" (click)="onActivate()">Activate</button>
+
+<hr>
+<p *ngIf="userActivated">Activated!</p>

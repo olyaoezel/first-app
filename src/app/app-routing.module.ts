@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { HomeComponent } from "./home/home/home.component";
+import { HomeComponent } from "./home/home.component";
 import { MessagesComponent } from "./messages/messages.component";
 import { ServersComponent } from "./servers/servers.component";
 import { NewSubscriptionsComponent } from "./users/new-subscriptions/new-subscriptions/new-subscriptions.component";
