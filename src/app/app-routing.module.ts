@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { FormsComponent } from "./forms/forms.component";
 import { HomeComponent } from "./home/home.component";
 import { MessagesComponent } from "./messages/messages.component";
 import { ServersComponent } from "./servers/servers.component";
@@ -14,6 +15,7 @@ const appRoutes: Routes = [
     { path: 'users', component: UsersComponent },
     { path: 'users/new-subscriptions', component: NewSubscriptionsComponent },
     { path: 'users/:id/:name', component: UserComponent },
+    { path: 'forms', component: FormsComponent },
 ];
 
 @NgModule({

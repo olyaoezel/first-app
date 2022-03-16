@@ -8,7 +8,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { SuccessAlertComponent } from './messages/success-alert/success-alert.component';
 import { SecondaryAlertComponent } from './messages/secondary-alert/secondary-alert.component';
 import { InfoAlertComponent } from './messages/info-alert/info-alert.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GameControlComponent } from './game-control/game-control.component';
 import { OddComponent } from './game-control/odd/odd.component';
 import { EvenComponent } from './game-control/even/even.component';
@@ -22,6 +22,8 @@ import { NewSubscriptionsComponent } from './users/new-subscriptions/new-subscri
 import { ClickOutsideDirective } from './directives/click-outside.directive';
 import { UserComponent } from './users/user/user.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsComponent } from './forms/forms.component';
+import { FormsReactiveComponent } from './forms/forms-reactive/forms-reactive.component';
 
 
 @NgModule({
@@ -45,12 +47,14 @@ import { AppRoutingModule } from './app-routing.module';
     NewSubscriptionsComponent,
     ClickOutsideDirective,
     UserComponent,
-
+    FormsComponent,
+    FormsReactiveComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
