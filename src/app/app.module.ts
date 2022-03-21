@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ServerComponent } from './servers/server/server.component';
@@ -29,6 +30,9 @@ import { ShortenPipe } from './pipes/shorten.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { ReversedPipe } from './pipes/reversed.pipe';
 import { SortedPipe } from './pipes/sorted.pipe';
+import { HttpRequestsComponent } from './http-requests/http-requests.component';
+import { AuthInterceptorService } from './interceptors/auth-interceptor.service';
+import { LoggingINterceptorService } from './interceptors/logging-interceptor.service';
 
 
 @NgModule({
@@ -58,15 +62,28 @@ import { SortedPipe } from './pipes/sorted.pipe';
     ShortenPipe,
     FilterPipe,
     ReversedPipe,
-    SortedPipe
+    SortedPipe,
+    HttpRequestsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptorService,
+    multi: true //multiple services
+    },
+    {
+    provide: HTTP_INTERCEPTORS,
+    useClass: LoggingINterceptorService,
+    multi: true 
+  } //reihenfolge von Interceptors ist wichtig
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

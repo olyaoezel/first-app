@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { FormsComponent } from "./forms/forms.component";
 import { HomeComponent } from "./home/home.component";
+import { HttpRequestsComponent } from "./http-requests/http-requests.component";
 import { MessagesComponent } from "./messages/messages.component";
 import { PipesComponent } from "./pipes/pipes.component";
 import { ServersComponent } from "./servers/servers.component";
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
     { path: 'users/:id/:name', component: UserComponent },
     { path: 'forms', component: FormsComponent },
     { path: 'pipes', component: PipesComponent },
+    { path: 'http-requests', component: HttpRequestsComponent },
 ];
 
 @NgModule({
