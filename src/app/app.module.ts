@@ -33,6 +33,8 @@ import { SortedPipe } from './pipes/sorted.pipe';
 import { HttpRequestsComponent } from './http-requests/http-requests.component';
 import { AuthInterceptorService } from './interceptors/auth-interceptor.service';
 import { LoggingINterceptorService } from './interceptors/logging-interceptor.service';
+import { AnimationsComponent } from './animations/animations.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 
 @NgModule({
@@ -63,14 +65,16 @@ import { LoggingINterceptorService } from './interceptors/logging-interceptor.se
     FilterPipe,
     ReversedPipe,
     SortedPipe,
-    HttpRequestsComponent
+    HttpRequestsComponent,
+    AnimationsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {
